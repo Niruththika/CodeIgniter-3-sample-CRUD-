@@ -488,7 +488,7 @@ public function generate_pdf()
     $dompdf->loadHtml($html);
     $dompdf->setPaper('A4', 'portrait');
 
-    // Render the HTML as PDF
+
     try {
         $dompdf->render();
         $dompdf->stream("user_data.pdf", array("Attachment" => false)); // Attachment: false for inline, true for download
